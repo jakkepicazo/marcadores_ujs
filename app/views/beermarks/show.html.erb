@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @beermark.name %>
+</p>
+
+<p>
+  <strong>Malts:</strong>
+  <%= @beermark.malts %>
+</p>
+
+<p>
+  <strong>Alcohol:</strong>
+  <%= @beermark.alcohol %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @beermark.category_id %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @beermark.kind_id %>
+</p>
+
+<%= link_to 'Edit', edit_beermark_path(@beermark) %> |
+<%= link_to 'Back', beermarks_path %>

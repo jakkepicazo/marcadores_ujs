@@ -1,0 +1,2 @@
+module BeermarksHelper
+end
