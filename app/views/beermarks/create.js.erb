@@ -1,0 +1,4 @@
+var elemento = document.querySelector('table tbody')
+
+elemento.insertAdjacentHTML('beforeend', " <%= escape_javascript(render partial: 'beermarks/beermark', locals: { beermark:@beermark}) %> ")
+

@@ -4,6 +4,9 @@ class BeermarksController < ApplicationController
   # GET /beermarks or /beermarks.json
   def index
     @beermarks = Beermark.all
+    @beermark = Beermark.new
+    @kinds = Kind.all
+    @categories = Category.all
   end
 
   # GET /beermarks/1 or /beermarks/1.json
@@ -27,6 +30,7 @@ class BeermarksController < ApplicationController
       if @beermark.save
         format.html { redirect_to @beermark, notice: "Beermark was successfully created." }
         format.json { render :show, status: :created, location: @beermark }
+        format.js
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @beermark.errors, status: :unprocessable_entity }

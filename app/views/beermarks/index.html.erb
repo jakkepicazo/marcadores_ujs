@@ -2,6 +2,8 @@
 
 <h1>Beermarks</h1>
 
+<%= render 'form', beermark: @beermark %>
+
 <table>
   <thead>
     <tr>
@@ -16,20 +18,12 @@
 
   <tbody>
     <% @beermarks.each do |beermark| %>
-      <tr>
-        <td><%= beermark.name %></td>
-        <td><%= beermark.malts %></td>
-        <td><%= beermark.alcohol %></td>
-        <td><%= beermark.category_id %></td>
-        <td><%= beermark.kind_id %></td>
-        <td><%= link_to 'Show', beermark %></td>
-        <td><%= link_to 'Edit', edit_beermark_path(beermark) %></td>
-        <td><%= link_to 'Destroy', beermark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <%= render 'beermark', beermark: beermark %>
     <% end %>
   </tbody>
 </table>
 
 <br>
+
 
 <%= link_to 'New Beermark', new_beermark_path %>
