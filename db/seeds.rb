@@ -19,6 +19,13 @@ kind1 = Kind.create(name: 'Porter')
 kind2 = Kind.create(name: 'Stout') 
 kind3 = Kind.create(name: 'Wheat') 
 
+sub1 = Category.create(name: 'Dark',  category_id:cat1, character: true)
+sub2 = Category.create(name: 'light',  category_id:cat, character:true)
+sub3 = Category.create(name: 'Dark',  category_id:cat2, character:true)
+sub4 = Category.create(name: 'Light',  category_id:cat1, character:true)
+
+
+
 beer = Beermark.create!(name: 'Heineken', malts: 'Rye malt', alcohol: 5, category:cat1, kind: kind1)
 beer = Beermark.create!(name: 'Bavaria', malts: 'Pilsner', alcohol: 6, category:cat, kind: kind)
 beer = Beermark.create!(name: 'Imperial', malts: 'Pale', alcohol: 4, category:cat2, kind: kind1)

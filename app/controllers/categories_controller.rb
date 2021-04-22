@@ -18,6 +18,17 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
   end
+
+  def api
+    category = Category.find(params[])
+    hash = {
+    name: category.name,
+    character: category.character,
+    category_id: category.category_id,
+    beermarks: category.beermarks.pluck(:name)
+    }
+    render json: hash
+    end 
   
 
   # POST /categories or /categories.json
