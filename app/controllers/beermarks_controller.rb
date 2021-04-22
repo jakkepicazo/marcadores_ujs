@@ -9,13 +9,14 @@ class BeermarksController < ApplicationController
     @categories = Category.all
   end
 
-  # GET /beermarks/1 or /beermarks/1.json
+  # GET /beermarks/1 or /beermarzzks/1.json
   def show
   end
 
   # GET /beermarks/new
   def new
     @beermark = Beermark.new
+    @categories = Category.pluck(:name, :id)
   end
 
   # GET /beermarks/1/edit

@@ -28,8 +28,10 @@ ActiveRecord::Schema.define(version: 2021_04_21_023802) do
     t.string "name"
     t.string "style"
     t.boolean "character"
+    t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_categories_on_category_id"
   end
 
   create_table "kinds", force: :cascade do |t|
@@ -40,4 +42,5 @@ ActiveRecord::Schema.define(version: 2021_04_21_023802) do
 
   add_foreign_key "beermarks", "categories"
   add_foreign_key "beermarks", "kinds"
+  add_foreign_key "categories", "categories"
 end

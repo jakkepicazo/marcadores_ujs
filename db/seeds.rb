@@ -10,9 +10,9 @@ Beermark.destroy_all
 Category.destroy_all
 Kind.destroy_all
 
-cat = Category.create(name: 'beer',  style:'Belgian Strong Ale', character: true)
-cat1 = Category.create(name: 'beer',  style:'Belgian Strong', character: true)
-cat2 = Category.create(name: 'beer',  style:'Belgian', character: true)
+cat = Category.create(name: 'Belgian Strong Ale',  style:'beer', character: true)
+cat1 = Category.create(name: 'Belgian Strong',  style:'Beer', character: true)
+cat2 = Category.create(name: 'Belgian',  style:'Beer', character: true)
 
 kind = Kind.create(name: 'Lager') 
 kind1 = Kind.create(name: 'Porter') 
