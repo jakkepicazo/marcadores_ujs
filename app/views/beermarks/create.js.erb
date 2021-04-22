@@ -2,3 +2,5 @@ var elemento = document.querySelector('table tbody')
 
 elemento.insertAdjacentHTML('beforeend', " <%= escape_javascript(render partial: 'beermarks/beermark', locals: { beermark:@beermark}) %> ")
 
+var content = document.querySelector('#beermark_content') 
+content.value = ''

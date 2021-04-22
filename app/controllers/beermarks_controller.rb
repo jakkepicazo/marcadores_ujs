@@ -5,8 +5,8 @@ class BeermarksController < ApplicationController
   def index
     @beermarks = Beermark.all
     @beermark = Beermark.new
-    @kinds = Kind.all
-    @categories = Category.all
+    # @kinds = Kind.all
+    # @categories = Category.all
   end
 
   # GET /beermarks/1 or /beermarzzks/1.json
@@ -16,7 +16,7 @@ class BeermarksController < ApplicationController
   # GET /beermarks/new
   def new
     @beermark = Beermark.new
-    @categories = Category.pluck(:name, :id)
+    # @categories = Category.pluck(:name, :id)
   end
 
   # GET /beermarks/1/edit

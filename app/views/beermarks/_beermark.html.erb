@@ -1,4 +1,4 @@
-<tr>
+     <tr id="beermark-<%= beermark.id %>">
      <td><%= beermark.name %></td>
      <td><%= beermark.malts %></td>
      <td><%= beermark.alcohol %></td>
@@ -7,4 +7,4 @@
      <td><%= link_to 'Show', beermark %></td>
      <td><%= link_to 'Edit', edit_beermark_path(beermark) %></td>
      <td><%= link_to 'Destroy', beermark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-</tr>
+     </tr>
